@@ -1,0 +1,31 @@
+---
+? ''
+: - ttl: 10800
+    type: A
+    value: 217.70.184.38
+  - ttl: 10800
+    type: MX
+    values:
+    - exchange: spool.mail.gandi.net.
+      preference: 10
+    - exchange: fb.mail.gandi.net.
+      preference: 50
+  - ttl: 10800
+    type: TXT
+    value: v=spf1 include:_mailcust.gandi.net ?all
+gm1._domainkey:
+  ttl: 10800
+  type: CNAME
+  value: gm1.gandimail.net.
+gm2._domainkey:
+  ttl: 10800
+  type: CNAME
+  value: gm2.gandimail.net.
+gm3._domainkey:
+  ttl: 10800
+  type: CNAME
+  value: gm3.gandimail.net.
+mailsa:
+  ttl: 10800
+  type: TXT
+  value: ceaec6263b7f53559f11ede5019654f4f68dba95d195762c95661d265969d03c

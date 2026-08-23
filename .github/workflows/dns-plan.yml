@@ -1,0 +1,68 @@
+name: DNS Plan
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "zones/**"
+      - "config/**"
+      - "requirements.txt"
+      - ".github/workflows/dns-*.yml"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: dns-plan-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - run: pip install -r requirements.txt
+
+      - name: octoDNS plan (dry run)
+        env:
+          GANDI_TOKEN: ${{ secrets.GANDI_TOKEN }}
+        run: |
+          set -o pipefail
+          octodns-sync --config-file=config/octodns.yaml 2>&1 | tee plan.txt
+
+      - name: Comment plan on PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const plan = fs.readFileSync('plan.txt', 'utf8').slice(-60000);
+            const marker = '<!-- dns-plan -->';
+            const body = `${marker}\n### DNS Plan\n\n\`\`\`\n${plan}\n\`\`\``;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c => c.body.startsWith(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }

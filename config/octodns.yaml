@@ -1,0 +1,38 @@
+---
+providers:
+  # Source of truth: the hand-edited YAML files in ./zones
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: ./zones
+    default_ttl: 3600
+    enforce_order: false
+
+  # Target: the live Gandi DNS records for the zones below
+  gandi:
+    class: octodns_gandi.GandiProvider
+    token: env/GANDI_TOKEN
+
+zones:
+  fluttermakers.fr.:
+    sources:
+      - config
+    targets:
+      - gandi
+
+  androidmakers.fr.:
+    sources:
+      - config
+    targets:
+      - gandi
+
+  fraug.fr.:
+    sources:
+      - config
+    targets:
+      - gandi
+
+  mobilemakers.fr.:
+    sources:
+      - config
+    targets:
+      - gandi

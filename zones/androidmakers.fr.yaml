@@ -1,0 +1,53 @@
+---
+? ''
+: - type: A
+    value: 34.54.154.88
+  - ttl: 10800
+    type: MX
+    values:
+    - exchange: spool.mail.gandi.net.
+      preference: 10
+    - exchange: fb.mail.gandi.net.
+      preference: 50
+  - ttl: 10800
+    type: TXT
+    values:
+    - google-site-verification=AE2GstR-qnXXuwEJLFxhmf_QReqAeeVnA-420kZ29ec
+    - google-site-verification=b_RjwAvQyzoAcbc9T8CAZhg59kT2AHEy3r04eYRMWlQ
+    - v=spf1 include:_mailcust.gandi.net ?all
+_95bcae4b5892ab40e6111bbcbf543dc6:
+  ttl: 10800
+  type: CNAME
+  value: 293b3b34677c742a631d07a56b4535a6.cee369ad42ab23ecb6971b7fc4fab486.c00cdbdd0382a2fa9e3c.sectigo.com.
+_564c074ab8c46dd6bfbe24d63647a788.cfp:
+  ttl: 10800
+  type: CNAME
+  value: 995faafe50302d71829a8463fb90bfaf.9da5c4ee4c8f11cbfb8cf77e42c750d2.4ecbb790f241666326d3.sectigo.com.
+_4675b646f6980626effc3695335d93f1.cfp:
+  ttl: 10800
+  type: CNAME
+  value: 06891789a0fa9c9c366ae3040a92b142.082c1b110a7ca355cd1bf9f3690db457.9cff3bcaae0aa2d6e4d5.sectigo.com.
+_a29fa3180eb0e7e98eea4638cdc45389.cfp:
+  ttl: 10800
+  type: CNAME
+  value: aa010b94f33d6f94914894bf43f542c7.580cb5a06dc5f4dd38276687eb8289db.78b91366b15c399bd055.sectigo.com.
+blog:
+  ttl: 10800
+  type: CNAME
+  value: blogs.vip.gandi.net.
+cfp:
+  ttl: 10800
+  type: CNAME
+  value: webredir.gandi.net.
+webmail:
+  ttl: 10800
+  type: CNAME
+  value: webmail.gandi.net.
+www:
+  ttl: 10800
+  type: CNAME
+  value: webredir.vip.gandi.net.
+www.cfp:
+  ttl: 10800
+  type: CNAME
+  value: webredir.vip.gandi.net.

@@ -1,0 +1,19 @@
+---
+? ''
+: - ttl: 1800
+    type: A
+    values:
+    - 151.101.1.195
+    - 151.101.65.195
+  - ttl: 10800
+    type: MX
+    values:
+    - exchange: spool.mail.gandi.net.
+      preference: 10
+    - exchange: fb.mail.gandi.net.
+      preference: 50
+  - ttl: 1800
+    type: TXT
+    values:
+    - google-site-verification=voUl6HDCefE_T7OBJ3X6yiOzOr42LFDdwNxn7MntNDc
+    - v=spf1 include:_mailcust.gandi.net ?all
