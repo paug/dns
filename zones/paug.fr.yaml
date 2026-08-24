@@ -1,0 +1,28 @@
+---
+? ''
+: - ttl: 21600
+    type: A
+    value: 199.36.158.100
+  - ttl: 21600
+    type: MX
+    values:
+    - exchange: aspmx.l.google.com.
+      preference: 1
+    - exchange: alt1.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt2.aspmx.l.google.com.
+      preference: 5
+    - exchange: aspmx2.googlemail.com.
+      preference: 10
+    - exchange: aspmx3.googlemail.com.
+      preference: 10
+  - ttl: 21600
+    type: TXT
+    values:
+    - google-site-verification=CF5OccWvfQMQZwQ9n9QM2H3tpTneSYwzd9ZZay0TTDQ
+    - hosting-site=website-73f72
+    - v=spf1 mx include:_spf.google.com include:mx.ovh.com ~all
+_acme-challenge:
+  ttl: 10800
+  type: TXT
+  value: 7XJb_vNIqYYUYLMLBBn8tLWoXDJwKc1i0cpMz-pEykE
