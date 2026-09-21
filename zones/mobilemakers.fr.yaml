@@ -13,6 +13,29 @@
   - ttl: 10800
     type: TXT
     value: v=spf1 include:_mailcust.gandi.net ?all
+  - ttl: 10800
+    type: TXT
+    value: newsletter.infomaniak.com 
+_amazonses.mobilemakers.fr:
+  ttl: 10800
+  type: TXT
+  value: LT4mZKyZzQdAo79NyNBbLjEDH11TLORCnmIs6NTdFEk=
+s7tphwnnh4fzxbwo7z73rrpuje5ppjoy._domainkey.mobilemakers.fr:
+  ttl: 10800
+  type: CNAME
+  value: s7tphwnnh4fzxbwo7z73rrpuje5ppjoy.dkim.amazonses.com.
+aigl4gwfw6t77b7rse4hjyxz7rifc5m6._domainkey.mobilemakers.fr:
+  ttl: 10800
+  type: CNAME
+  value: aigl4gwfw6t77b7rse4hjyxz7rifc5m6.dkim.amazonses.com.
+u6zxwaiqclyau32znkczwmjnf4q3hknd._domainkey.mobilemakers.fr:
+  ttl: 10800
+  type: CNAME
+  value: u6zxwaiqclyau32znkczwmjnf4q3hknd.dkim.amazonses.com.
+ _dmarc.mobilemakers.fr:
+  ttl: 10800
+  type: TXT
+  value: v=DMARC1; p=reject; 
 gm1._domainkey:
   ttl: 10800
   type: CNAME
