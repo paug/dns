@@ -34,7 +34,7 @@ u6zxwaiqclyau32znkczwmjnf4q3hknd._domainkey.mobilemakers.fr:
 _dmarc.mobilemakers.fr:
   ttl: 10800
   type: TXT
-  value: v=DMARC1; p=reject; 
+  value: v=DMARC1\; p=reject\;
 gm1._domainkey:
   ttl: 10800
   type: CNAME
