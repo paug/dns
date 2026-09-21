@@ -12,10 +12,9 @@
       preference: 50
   - ttl: 10800
     type: TXT
-    value: v=spf1 include:_mailcust.gandi.net ?all
-  - ttl: 10800
-    type: TXT
-    value: newsletter.infomaniak.com ?all
+    values:
+    - v=spf1 include:_mailcust.gandi.net ?all
+    - newsletter.infomaniak.com ?all
 _amazonses.mobilemakers.fr:
   ttl: 10800
   type: TXT
