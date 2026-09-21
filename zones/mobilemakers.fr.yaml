@@ -32,7 +32,7 @@ u6zxwaiqclyau32znkczwmjnf4q3hknd._domainkey.mobilemakers.fr:
   ttl: 10800
   type: CNAME
   value: u6zxwaiqclyau32znkczwmjnf4q3hknd.dkim.amazonses.com.
- _dmarc.mobilemakers.fr:
+_dmarc.mobilemakers.fr:
   ttl: 10800
   type: TXT
   value: v=DMARC1; p=reject; 
