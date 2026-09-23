@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 10800
     type: A
-    value: 217.70.184.38
+    value: 199.36.158.100
   - ttl: 10800
     type: MX
     values:
@@ -12,7 +12,9 @@
       preference: 50
   - ttl: 10800
     type: TXT
-    value: v=spf1 include:_mailcust.gandi.net ?all
+    values:
+    - v=spf1 include:_mailcust.gandi.net ?all
+    - hosting-site=mobilemakers-redirect
 gm1._domainkey:
   ttl: 10800
   type: CNAME
