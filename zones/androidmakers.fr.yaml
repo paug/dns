@@ -1,7 +1,7 @@
 ---
 ? ''
 : - type: A
-    value: 34.54.154.88
+    value: 199.36.158.100
   - ttl: 10800
     type: MX
     values:
@@ -15,6 +15,7 @@
     - google-site-verification=AE2GstR-qnXXuwEJLFxhmf_QReqAeeVnA-420kZ29ec
     - google-site-verification=b_RjwAvQyzoAcbc9T8CAZhg59kT2AHEy3r04eYRMWlQ
     - v=spf1 include:_mailcust.gandi.net ?all
+    - hosting-site=mobilemakers-redirect
 _95bcae4b5892ab40e6111bbcbf543dc6:
   ttl: 10800
   type: CNAME
