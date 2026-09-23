@@ -2,7 +2,7 @@
 ? ''
 : - ttl: 10800
     type: A
-    value: 217.70.184.38
+    value: 199.36.158.100
   - ttl: 10800
     type: MX
     values:
@@ -15,6 +15,7 @@
     values:
     - v=spf1 include:_mailcust.gandi.net ?all
     - newsletter.infomaniak.com ?all
+    - hosting-site=mobilemakers
 _amazonses.mobilemakers.fr:
   ttl: 10800
   type: TXT
