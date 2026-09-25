@@ -31,4 +31,4 @@ jobs:
       - name: octoDNS apply
         env:
           GANDI_TOKEN: ${{ secrets.GANDI_TOKEN }}
-        run: octodns-sync --config-file=config/octodns.yaml --doit
+        run: octodns-sync --config-file=config/octodns.yaml --doit --force
