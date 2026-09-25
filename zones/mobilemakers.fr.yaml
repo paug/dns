@@ -14,7 +14,7 @@
     type: TXT
     values:
     - v=spf1 include:_mailcust.gandi.net ?all
-    - newsletter.infomaniak.com ?all
+    - newsletter.infomaniak.com
     - hosting-site=mobilemakers
 _amazonses.mobilemakers.fr:
   ttl: 10800
